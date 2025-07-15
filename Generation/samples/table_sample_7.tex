@@ -1,0 +1,74 @@
+\documentclass{article}
+\usepackage[table]{xcolor}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{pifont}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{geometry}
+\geometry{margin=1.8in}
+\pagestyle{empty}
+
+\newcommand{\dotcolor}[1]{\textcolor{#1}{\Large\textbullet}}
+\newcommand{\stackedbars}[3]{%
+  \begin{tikzpicture}[scale=0.3]
+    \fill[#1] (0,0.6) rectangle (1,0.7);  % top bar
+    \fill[#2] (0,0.3) rectangle (1,0.4);  % middle bar
+    \fill[#3] (0,0.0) rectangle (1,0.1);  % bottom bar
+  \end{tikzpicture}%
+}
+
+\begin{document}
+
+\footnotesize
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.4cm}Xrrrcc}
+\hline
+&&\multicolumn{2}{c}{\textbf{2024}}&\textbf{2023-restated*}&&\\
+\arrayrulecolor{red}\cmidrule(lr){3-4}
+\multicolumn{2}{c}{\textbf{Category}} & \textbf{tCO\textsubscript{2}e} & \textbf{\%} & \textbf{\ tCO\textsubscript{2}e} & & \\
+\hline\arrayrulecolor{black}
+1 & Purchased goods and services & 381,127 & 50\% & 493,845 & \dotcolor{orange} & \stackedbars{gray}{gray}{teal} \\
+2 & Capital goods & 10,292 & 1\% & 6,270 & \dotcolor{orange} & \stackedbars{gray}{teal}{teal} \\
+3 & Fuel and energy related activities & 13,228 & 2\% & 10,856 & \dotcolor{blue} & \stackedbars{teal}{teal}{teal} \\
+4 & Upstream transportation and distribution & 38,800 & 5\% & 38,319 & \dotcolor{blue} & \stackedbars{gray}{teal}{teal} \\
+5 & Waste & 1,020 & 0\% & 945 & \dotcolor{orange} & \stackedbars{teal}{teal}{teal} \\
+6 & Business travel & 2,703 & 0\% & 2,391 & \dotcolor{orange} & \stackedbars{teal}{teal}{teal} \\
+7 & Employee commuting & 23,779 & 3\% & 25,907 & \dotcolor{orange} & \stackedbars{gray}{teal}{teal} \\
+8 & Upstream leased assets & – & 0\% & – & \dotcolor{gray} & \stackedbars{gray}{gray}{gray} \\
+9 & Downstream transportation & 31,417 & 4\% & 34,858 & \dotcolor{blue} & \stackedbars{gray}{teal}{teal} \\
+10 & Processing of sold products & – & 0\% & – & \dotcolor{gray} & \stackedbars{gray}{gray}{gray} \\
+11 & Use of sold products & 229,607 & 30\% & 233,242 & \dotcolor{blue} & \stackedbars{gray}{gray}{teal} \\
+12 & End-of-life treatment & 30,094 & 4\% & 34,608 & \dotcolor{blue} & \stackedbars{gray}{gray}{teal} \\
+13 & Downstream leased assets & – & 0\% & – & \dotcolor{gray} & \stackedbars{gray}{gray}{gray} \\
+14 & Franchises & – & 0\% & – & \dotcolor{gray} & \stackedbars{gray}{gray}{gray} \\
+15 & Investments & – & 0\% & – & \dotcolor{gray} & \stackedbars{gray}{gray}{gray} \\
+\hline
+&\textbf{Total} & \textbf{762,068} & \textbf{100\%} & \textbf{881,241} & & \\
+\hline
+\end{tabularx}
+
+\vspace{1.5em}
+\textcolor{red}{\textbf{Key to Scope 3 data}}
+
+\vspace{0.3em}
+\begin{multicols}{2}
+\textbf{Source of data}
+\begin{itemize}
+  \item[\dotcolor{orange}] Derived from data that is within our direct control or that we can more easily verify
+  \item[\dotcolor{blue}] Derived from data that is not within our direct control or that is more difficult to verify
+  \item[\dotcolor{gray}] Not applicable
+\end{itemize}
+
+\columnbreak
+
+\textbf{Status of data}
+\begin{itemize}
+  \item[\stackedbars{teal}{teal}{teal}] Most secure – Good quality data / confidence in estimations
+  \item[\stackedbars{gray}{teal}{teal}] Less secure – Some work to do to verify data quality / reasonable reliance on industry estimations
+  \item[\stackedbars{gray}{gray}{teal}] Least secure – More work to do to verify data quality / higher reliance on industry estimation / assumption
+  \item[\stackedbars{gray}{gray}{teal}] Not applicable
+\end{itemize}
+\end{multicols}
+
+\end{document}

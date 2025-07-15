@@ -1,0 +1,82 @@
+\documentclass{article}
+\usepackage[table]{xcolor}
+\usepackage{booktabs}
+\usepackage{makecell}
+\usepackage{geometry}
+\usepackage{tabularx}
+\usepackage{array}
+\geometry{left=0.3in, right=0.6in, top=1in, bottom=1in}
+
+\renewcommand{\arraystretch}{1.6}
+\setlength{\tabcolsep}{4pt}  % tighter columns
+\pagestyle{empty}
+
+\begin{document}
+
+\small
+
+% ------------------ Net Sales Change Drivers Table ------------------
+\noindent
+
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X
+                        >{\centering\arraybackslash}b{2.2cm}
+                        >{\centering\arraybackslash}b{2.2cm}
+                        >{\centering\arraybackslash}b{2.2cm}
+                        >{\centering\arraybackslash}b{1.1cm}
+                        >{\centering\arraybackslash}b{1.1cm}
+                        >{\centering\arraybackslash}b{1.2cm}
+                        >{\centering\arraybackslash}b{2cm}}
+
+&\multicolumn{7}{c}{\textbf{Net Sales Change Drivers 2023 vs. 2022$^{(1)}$}}\\
+\cline{2-8}
+&\textbf{Volume with Acquisitions \& Divestitures}
+&\textbf{Volume Excluding Acquisitions \& Divestitures} 
+&\textbf{Foreign Exchange} 
+&\textbf{Price} 
+&\textbf{Mix} 
+&\textbf{Other}$^{(2)}$
+&\textbf{Net Sales Growth} \\
+\cmidrule(lr){2-2}\cmidrule(lr){3-3}\cmidrule(lr){4-4}\cmidrule(lr){5-5}\cmidrule(lr){6-6}\cmidrule(lr){7-7}\cmidrule(lr){8-8}
+\rowcolor{cyan!20}
+Beauty & (1)\% & (2)\% & (5)\% & 8\% & (1)\% & 1\% & 2\% \\
+Grooming & (3)\% & (3)\% & (7)\% & 9\% & (2)\% & —\% & (3)\% \\
+\rowcolor{cyan!20}
+Health Care & (1)\% & (1)\% & (4)\% & 5\% & 4\% & —\% & 4\% \\
+Fabric \& Home Care & (4)\% & (4)\% & (5)\% & 11\% & 1\% & —\% & 3\% \\
+\rowcolor{cyan!20}
+Baby, Feminine \& Family Care & (3)\% & (3)\% & (4)\% & 8\% & 1\% & —\% & 2\% \\
+\cline{2-8}
+\textbf{TOTAL COMPANY} & \textbf{(3)\%} & \textbf{(3)\%} & \textbf{(5)\%} & \textbf{9\%} & \textbf{1\%} & \textbf{—\%} & \textbf{2\%} \\
+\cline{2-8}
+\noalign{\vskip 1pt}
+\cline{2-8}
+\end{tabularx}
+
+\vspace{0.8em}
+{
+\footnotesize
+$^{(1)}$ Net sales percentage changes are approximations based on quantitative formulas that are consistently applied. \par
+$^{(2)}$ Other includes the sales mix impact from acquisitions and divestitures and rounding impacts necessary to reconcile volume to net sales.
+}
+\vspace{2em}
+
+% ------------------ Beauty Segment Table ------------------
+\textbf{\large BEAUTY}
+
+\vspace{0.5em}
+
+
+\begin{tabularx}{\textwidth}{Xccc}
+
+\textbf{(\$ millions)} & \textbf{2023} & \textbf{2022} & \textbf{Change vs. 2022} \\
+\cline{2-4}
+\rowcolor{cyan!20}
+Volume & N/A & N/A & (1)\% \\
+\textbf{Net sales} & \textbf{\$15,008} & \textbf{\$14,740} & \textbf{2\%} \\
+\rowcolor{cyan!20}
+\textbf{Net earnings} & \textbf{\$3,178} & \textbf{\$3,160} & \textbf{1\%} \\
+\% of net sales & 21.2\% & 21.4\% & (20) bps \\
+\hline
+\end{tabularx}
+
+\end{document}

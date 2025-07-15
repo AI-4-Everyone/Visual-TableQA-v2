@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{adjustbox}
+\usetikzlibrary{positioning, shapes.callouts, arrows.meta}
+
+\definecolor{saddlebrown}{RGB}{139,69,19}
+\definecolor{plum}{RGB}{221,160,221}
+\definecolor{mediumseagreen}{RGB}{60,179,113}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{figure}[ht]
+\centering
+% Define block style
+\begin{tikzpicture}[
+  every node/.style={font=\sffamily},
+  nobox/.style={draw=none, fill=none, inner sep=0pt},
+  box/.style args={#1,#2}{draw, fill=#1, text width=#2, align=center, rounded corners=4pt, inner sep=2pt, minimum height=0.8cm},
+  ]
+
+
+% Films block
+\node[nobox] (A) {Films};
+\node[box={saddlebrown, 2.4cm}, below left=0.2cm and 1cm of A] (A1){Is the film with John Morris in the role of Santa Boy a halloween or christmas movie};
+\node[box={saddlebrown, 2.7cm}, anchor=north west] at ([xshift=0.1cm]A1.north east) (A2){In what year was the W. Lee movie title featuring a child wearing a hat on the poster?};
+\node[box={saddlebrown, 2.4cm}, anchor=north west] at ([xshift=0.1cm]A2.north east) (A3){How many year(s) during the 2010's was Rupert Gregson-Williams with Columbia Pictures studio?};
+\node[box={saddlebrown, 2.7cm}, anchor=north west] at ([xshift=-0.2cm, yshift=-1pt] A1.south west) (A4){Where was the title of the Rocky Carroll movie filmed where he played Willie?};
+\node[box={saddlebrown, 2.5cm}, anchor=north west] at ([xshift=0.1cm]A4.north east) (A5){The film written by Kanika Dhillion that features two people sticking their tongues out on its poster came out in what year?};
+\node[box={saddlebrown, 2.7cm}, anchor=north west] at ([xshift=-0.1cm, yshift=-1pt] A3.south west) (A6){In which movie did Will Ferrell work as a producer first?};
+\node[box={saddlebrown, 2.7cm}, below=1pt of A4] (A7){Was Mannix played by Michael Drawer};
+% Surrounding polygon
+\draw[thick, fill=saddlebrown, opacity=0.2]
+  ([yshift=0.8cm]A1.north west) -- ([yshift=0.8cm]A3.north east) -- ([xshift=0.3cm]A6.south east) -- ([yshift=-0.5cm]A5.south) --
+  ([xshift=-0.4cm]A7.south west) -- cycle;
+
+
+% Divers block
+\node[nobox, above right= 0.2cm and 2.7cm of A3] (B) {Divers};
+\node[box={plum, 3.2cm}, anchor=north west] at ([xshift=0.7cm]A3.north east) (B1){Among locomotive manufactures for Chemins de Fer Orientaux, which company made trains with red in the middle of their wheels in 1875?};
+\node[box={plum, 2.3cm}, anchor=north west] at ([xshift=0.1cm]B1.north east) (B2){Which year did Mark Meier produce a video game that features a view of the earth from space on its cover?};
+% Surrounding polygon
+\draw[thick, fill=plum, opacity=0.2]
+  ([yshift=0.8cm]B1.north west) -- ([xshift=0.2cm, yshift=0.8cm]B2.north east) -- ([xshift=0.1cm, yshift=-0.5cm]B2.south east) --
+  ([xshift=-0.2cm]B1.south west) -- cycle;
+
+% Sport block
+\node[nobox, below= 0.9cm and 0.2cm of B1] (C) {Sports};
+\node[box={mediumseagreen, 3.2cm}, anchor=north west] at ([xshift=0.2cm, yshift=-1.5cm] B1.south west) (C1){Between the Queens Park rangers or the team whose logo has a rose with leaves, which has higher points in the 1999-2000 Barnskey F.C season final league table?};
+% Surrounding polygon
+\draw[thick, fill=mediumseagreen, opacity=0.2]
+  ([yshift=0.8cm]C1.north west) -- ([xshift=1.9cm, yshift=0.3cm]C1.north east) -- ([yshift=-0.3cm]C1.south east) -- ([xshift=-0.4cm]C1.south west) -- cycle;
+
+\end{tikzpicture}
+\end{figure}
+
+\end{document}

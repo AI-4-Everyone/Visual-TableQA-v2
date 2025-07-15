@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{tikz}
+\usepackage{xcolor, colortbl}
+\usepackage{array}
+\usepackage{graphicx}
+
+% Define custom colors
+\definecolor{VeryHigh}{RGB}{0,44,39}      % Dark teal
+\definecolor{High}{RGB}{0,179,136}        % Teal
+\definecolor{Moderate}{RGB}{255,172,0}    % Orange
+\definecolor{Low}{RGB}{255,245,233}       % Cream
+\definecolor{Minimal}{RGB}{230,255,255}   % Pale cyan
+
+\pagestyle{empty}
+
+\newcommand{\colorcell}[1]{\cellcolor{#1}~}
+
+\begin{document}
+
+% Title
+\noindent\textbf{\LARGE Levels of Citizen Engagement [created spaces] in Udaipur}
+\vspace{1em}
+
+% Legend as gradient bar
+\begin{center}
+\begin{tikzpicture}[x=1cm, y=1cm]
+  % Gradient bar
+  \shade[left color=Low, right color=VeryHigh] (0,0) rectangle (12,0.6);
+  % Labels
+  \node[anchor=north west] at (0,0) {
+  \begin{tabular}{@{}*{5}{>{\raggedright\arraybackslash}p{2cm}}@{}}
+\colorcell{Low} & \colorcell{Minimal} & \colorcell{Moderate} & \colorcell{High} & \colorcell{VeryHigh}\\
+ Low (Consultative) & Minimal (Tokenistic) & Moderate (Interactive) & High (Collaborative) & Very High (Empowered)
+\end{tabular}};
+\end{tikzpicture}
+\end{center}
+
+% Heatmap table
+\renewcommand{\arraystretch}{2.5} % Row height
+\setlength{\tabcolsep}{6pt}       % Column separation
+
+\begin{tabular}{>{\bfseries}r >{\raggedright\arraybackslash}p{4cm} *{10}{>{\centering\arraybackslash}m{0.6cm}}}
+1 & Accessibility & \colorcell{Low} & \colorcell{Minimal} & \colorcell{VeryHigh} & \colorcell{Moderate} & \colorcell{VeryHigh} & \colorcell{High} & \colorcell{Moderate} & \colorcell{Moderate} &\colorcell{Low} & \colorcell{VeryHigh} \\
+2 & Capacity Building Efforts & \colorcell{Minimal} & \colorcell{Minimal} & \colorcell{Minimal}& \colorcell{Moderate} & \colorcell{High} & \colorcell{VeryHigh} & \colorcell{Low} & \colorcell{Low} &\colorcell{Moderate} & \colorcell{Minimal} \\
+3 & Impact and Outcomes & \colorcell{Minimal} & \colorcell{Moderate} & \colorcell{Moderate} &\colorcell{Minimal} & \colorcell{VeryHigh} & \colorcell{High} & \colorcell{Moderate} & \colorcell{Moderate} & \colorcell{VeryHigh} & \colorcell{Moderate} \\
+4 & Participation Level & \colorcell{Moderate} & \colorcell{Moderate} & \colorcell{VeryHigh} & \colorcell{VeryHigh} & \colorcell{VeryHigh} & \colorcell{Moderate} & \colorcell{Low} & \colorcell{Moderate} & \colorcell{VeryHigh} & \colorcell{High} \\
+5 & Potential to Scale & \colorcell{High} & \colorcell{Minimal} & \colorcell{VeryHigh} & \colorcell{VeryHigh} & \colorcell{High} & \colorcell{Minimal} & \colorcell{Low} & \colorcell{Minimal} & \colorcell{VeryHigh} & \colorcell{Low} \\
+6 & Purpose/Objectives & \colorcell{Minimal} & \colorcell{High} & \colorcell{Low} & \colorcell{VeryHigh} & \colorcell{VeryHigh}& \colorcell{VeryHigh}& \colorcell{High} & \colorcell{High}&\colorcell{VeryHigh} & \colorcell{VeryHigh}
+\end{tabular}
+
+\end{document}

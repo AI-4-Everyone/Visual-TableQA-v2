@@ -1,0 +1,76 @@
+\documentclass{article}
+\usepackage[left=0.1in, right=0.1in, top=1in, bottom=1in]{geometry}
+\usepackage{tikz}
+\usepackage[dvipsnames]{xcolor}
+\usetikzlibrary{positioning}
+
+\definecolor{DarkOrange}{RGB}{255,140,0}
+\definecolor{DeepSkyBlue}{RGB}{0,191,255}
+\definecolor{MediumSeaGreen}{RGB}{60,179,113}
+\definecolor{Navy}{RGB}{0,0,128}
+
+\pagestyle{empty}
+
+\begin{document}
+\pagestyle{empty}
+\begin{center}
+\begin{tikzpicture}[
+    box/.style={align=left, font=\sffamily\small, inner sep=0.3cm, text=white},
+    label/.style={font=\sffamily\bfseries\itshape\Large, anchor=south west, xshift=2pt, yshift=2pt, text=white}
+]
+
+% Row 1
+\node[box, fill=RoyalBlue] (what) {\parbox[c][7cm][t]{4.8cm}{\raggedright \setlength{\parskip}{0.5em}
+What was the outcome of the 1940 United States presidential election in South Dakota?\par
+What was Port Vale's most expensive and least expensive transfer?\par
+What indicators determine the Times Higher Education World University Rankings?\par
+What is the categorization of the M101 and NGC 6365 galaxies?\par
+What career move did Andy Thompson make in 1997?\par
+What is the gender breakdown of the total population of Buh?}};
+\node[label] at (what.south west) {WHAT};
+
+\node[box, fill=DarkOrange, anchor=north west] at ([xshift=0.1cm]what.north east) (how) {
+\parbox[c][7cm][t]{4.6cm}{\raggedright \setlength{\parskip}{0.4em}
+How close was the election between Ann Marie Buerkle and Dan Maffei?\par
+How did Herbert Hoover's vote share compare to that of his Democrat opponent?\par
+How did the population of Torbay, Newfoundland and Labrador in 2016 compare to 2011?\par
+How did Philippines external debt change between 1999 and 2001?\par
+How frequent did Roy Bentley make an appearance for his Chelsea side in the 1954–55 season?
+}};
+\node[label] at (how.south west) {HOW};
+
+\node[box, fill=gray!70, anchor=north west] at ([xshift=0.1cm]how.north east) (which) {
+\parbox[c][3.2cm][t]{3.7cm}{\raggedright \setlength{\parskip}{1.6em}
+Which isotopes have a half life of $100\mu$s and 69ms?\par
+Which subway lines are interchangeable at Leopoldplatz station?
+}};
+\node[label] at (which.south west) {WHICH};
+
+\node[box, fill=DeepSkyBlue, anchor=north west, inner xsep=0.1cm] at ([xshift=0.1cm]which.north east) (when) {\parbox[c][4.4cm][t]{2.8cm}{\raggedright \setlength{\parskip}{0.5em}
+When was the first time a plane was equipped for maritime usage in the Cape Verdean Armed Forces ?\par
+When did Andy Karl win the Olivier Award and for which of his work?
+}};
+\node[label] at (when.south west) {WHEN};
+
+\node[box, fill=MediumSeaGreen, anchor=north west, inner xsep=0.35cm] at ([xshift=0.1cm]when.north east) (where) {\parbox[c][4.4cm][t]{2.1cm}{\raggedright \setlength{\parskip}{1.5em}
+Where does the Samudra Kanya Express travel?\par
+Where and when was the first Nuclear Security Summit held?\par
+}};
+\node[label] at (where.south west) {WHERE};
+
+% Row 2 (below WHICH)
+\node[box, fill=Goldenrod, anchor=north west] at ([yshift=-0.1cm]which.south west) (who) {\parbox[c][3.1cm][t]{3.7cm}{\raggedright \setlength{\parskip}{1.5em}
+Who were the top 3 contenders for the John Nicholls Medal?\par
+Who are the people in the executive branch of Russia?\par
+}};
+\node[label] at (who.south west) {WHO};
+
+\node[box, fill=Navy, anchor=north west] at ([yshift=-0.1cm]when.south west) (why) {
+\parbox[c][1.9cm][t]{5.3cm}{\raggedright \setlength{\parskip}{1.5em}
+Why was Ted Bank fired after leading Idaho to a combined 10-6-2 record in 1937 and 1938?\par
+}};
+\node[label] at (why.south west) {WHY};
+
+\end{tikzpicture}
+\end{center}
+\end{document}

@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage[margin=0.3in]{geometry}
+\usepackage{array, booktabs, xcolor, tabularx, multirow, makecell, colortbl}
+
+\renewcommand{\arraystretch}{1.3}
+\definecolor{lightgray}{gray}{0.9}
+\pagestyle{empty}
+
+\begin{document}
+
+\scriptsize  % Make table smaller to fit A4
+\setlength{\tabcolsep}{4pt}  % Reduce column padding
+
+\begin{center}
+\textbf{BLUE BIRD CORPORATION AND SUBSIDIARIES} \\
+\textbf{CONSOLIDATED STATEMENTS OF STOCKHOLDERS' (DEFICIT) EQUITY}
+\end{center}
+
+\begin{tabularx}{\textwidth}{l
+  >{\raggedleft\arraybackslash}X >{\raggedleft\arraybackslash}b{0.5cm} >{\raggedleft\arraybackslash}b{1.3cm}  % Common Stock
+  >{\raggedleft\arraybackslash}b{1cm} >{\raggedleft\arraybackslash}b{1.3cm}  % Convertible Preferred
+  >{\raggedleft\arraybackslash}b{1.3cm} >{\raggedleft\arraybackslash}b{1.3cm}  % AOCI, Retained
+  >{\raggedleft\arraybackslash}b{1.5cm} >{\raggedleft\arraybackslash}b{1.5cm}  % Treasury Stock
+  >{\raggedleft\arraybackslash}b{1.3cm} >{\raggedleft\arraybackslash}b{1.3cm}
+  >{\raggedleft\arraybackslash}b{1.3cm}}
+
+& \multicolumn{3}{p{2.8cm}}{\centering\arraybackslash \textbf{Common Stock}} 
+& \multicolumn{2}{p{2.6cm}}{\centering\arraybackslash \textbf{Convertible Preferred Stock}} &&&\multicolumn{2}{p{2.6cm}}{\centering\arraybackslash \textbf{Treasury Stock}} &\\
+\cmidrule(lr){2-4} \cmidrule(lr){5-6} \cmidrule(lr){9-10}
+
+\small\textit{(in thousands except for share data)}& \textbf{Shares} & \textbf{Par Value} & \textbf{Additional Paid-In-Capital}& \textbf{Shares} & \textbf{Amount}&\textbf{Accumulated Other Comprehensive Loss} &\textbf{(Accumulated Deficit) Retained Earnings} &\textbf{Shares} & \textbf{Amount} & \textbf{Total Stockholders (Deficit) Equity} \\
+\cmidrule(lr){2-2} \cmidrule(lr){3-3} \cmidrule(lr){4-4} \cmidrule(lr){5-5} \cmidrule(lr){6-6} \cmidrule(lr){7-7} \cmidrule(lr){8-8} \cmidrule(lr){9-9}\cmidrule(lr){10-10} \cmidrule(lr){11-11}
+
+\rowcolor{lightgray} 
+Balance, October 2, 2021 & 27,205,269 & \$3 & 96,170 & -- & \$-- & (44,794) & (33,753) & 1,782,568 & (50,282) & (32,656) \\
+Sale of common stock (Note 13) & 4,687,500 & -- & 74,798 & -- & -- & -- & -- & -- & -- & 74,798 \\
+Restricted stock activity & 116,556 & -- & (1,688) & -- & -- & -- & -- & -- & -- & (1,688) \\
+Stock option activity & 15,586 & -- & 284 & -- & -- & -- & -- & -- & -- & 284 \\
+Share-based compensation expense & -- & -- & 3,539 & -- & -- & -- & -- & -- & -- & 3,539 \\
+Net loss & -- & -- & -- & -- & -- & -- & (45,759) & -- & -- & (45,759) \\
+Other comprehensive income, net of tax & -- & -- & -- & -- & -- & 2,864 & -- & -- & -- & 2,864 \\
+
+\rowcolor{lightgray} 
+Balance, October 1, 2022 & 32,024,911 & \$3 & 173,103 & -- & \$-- & (41,930) & (79,512) & 1,782,568 & (50,282) & 1,382 \\
+\cmidrule(lr){2-2} \cmidrule(lr){3-3} \cmidrule(lr){4-4} \cmidrule(lr){5-5} \cmidrule(lr){6-6} \cmidrule(lr){7-7} \cmidrule(lr){8-8} \cmidrule(lr){9-9}\cmidrule(lr){10-10} \cmidrule(lr){11-11}
+
+Restricted stock activity & 79,545 & -- & (376) & -- & -- & -- & -- & -- & -- & (376) \\
+Stock option activity & 60,769 & -- & 1,119 & -- & -- & -- & -- & -- & -- & 1,119 \\
+Share-based compensation expense & -- & -- & 4,015 & -- & -- & -- & -- & -- & -- & 4,015 \\
+Net income & -- & -- & -- & -- & -- & -- & 23,812 & -- & -- & 23,812 \\
+Other comprehensive income, net of tax & -- & -- & -- & -- & -- & 10,046 & -- & -- & -- & 10,046 \\
+
+\rowcolor{lightgray} 
+Balance, September 30, 2023 & 32,165,225 & \$3 & 177,861 & -- & \$-- & (31,884) & (55,700) & 1,782,568 & (50,282) & 39,998 \\
+\cmidrule(lr){2-2} \cmidrule(lr){3-3} \cmidrule(lr){4-4} \cmidrule(lr){5-5} \cmidrule(lr){6-6} \cmidrule(lr){7-7} \cmidrule(lr){8-8} \cmidrule(lr){9-9}\cmidrule(lr){10-10} \cmidrule(lr){11-11}
+
+Issuance of warrants (Note 17) & -- & -- & 7,416 & -- & -- & -- & -- & -- & -- & 7,416 \\
+Restricted stock activity & 65,495 & -- & (1,178) & -- & -- & -- & -- & -- & -- & (1,178) \\
+Stock option activity & 239,120 & -- & 3,785 & -- & -- & -- & -- & -- & -- & 3,785 \\
+Share repurchase and retirement (Note 13) & (201,818) & -- & -- & -- & -- & -- & (9,938) & -- & -- & (9,938) \\
+Treasury stock retirement (Note 13) & -- & -- & (10,373) & -- & -- & -- & (39,909) & (1,782,568) & 50,282 & -- \\
+Share-based compensation expense & -- & -- & 8,466 & -- & -- & -- & -- & -- & -- & 8,466 \\
+Net income & -- & -- & -- & -- & -- & -- & 105,547 & -- & -- & 105,547 \\
+Other comprehensive income, net of tax & -- & -- & -- & -- & -- & 5,468 & -- & -- & -- & 5,468 \\
+\rowcolor{lightgray} Balance, September 28, 2024 & 32,268,022 & \$3 & 185,977 & -- & \$-- & (26,416) & -- & -- & -- & 159,564 \\
+\cmidrule(lr){2-2} \cmidrule(lr){3-3} \cmidrule(lr){4-4} \cmidrule(lr){5-5} \cmidrule(lr){6-6} \cmidrule(lr){7-7} \cmidrule(lr){8-8} \cmidrule(lr){9-9}\cmidrule(lr){10-10} \cmidrule(lr){11-11}
+
+\end{tabularx}
+
+\end{document}

@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs, tabularx, xcolor, colortbl}
+\usepackage{array}
+\pagestyle{empty}
+
+\definecolor{headerblue}{HTML}{2D4C65}
+\definecolor{lightgray}{gray}{0.9}
+
+\begin{document}
+
+\renewcommand{\arraystretch}{1.4}
+
+
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X
+                                    >{\raggedleft\arraybackslash}p{3cm}
+                                    >{\raggedleft\arraybackslash}p{3cm}}
+\rowcolor{headerblue}
+&\multicolumn{2}{c}{\color{white}\textbf{Current Executive Directors}}\\
+\arrayrulecolor{white}\cline{2-3}\arrayrulecolor{black}
+\rowcolor{headerblue}
+\color{white}\textbf{} & \color{white}\textbf{Andrew Livingston} & \color{white}\textbf{Paul Hayes} \\
+Shareholding requirement (\% of salary) & 200\% & 200\% \\
+Shareholding requirement (number of shares)\textsuperscript{1} & 172,322 & 112,664 \\
+Shares owned outright (including by connected persons)\textsuperscript{2,5} & 521,308 & 105,503 \\
+Current shareholding (\% of salary)\textsuperscript{1} & 605\% & 187\% \\
+\rowcolor{lightgray}
+Guideline met & Y & N \\
+\hline
+Unvested deferred bonus shares & 29,598 & 19,353 \\
+Share awards subject only to continued employment\textsuperscript{3} & 194 & 189 \\
+Share awards subject to performance conditions and continued employment\textsuperscript{4} & 730,354 & 389,105 \\
+\bottomrule
+\end{tabularx}
+
+\end{document}

@@ -1,0 +1,62 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{xcolor,colortbl}
+\usepackage{array}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Custom colors
+\definecolor{headerblue}{RGB}{10,45,100}
+\definecolor{darkblue}{RGB}{26,64,139}
+\definecolor{lightblue}{RGB}{50,85,160}
+\definecolor{textwhite}{RGB}{255,255,255}
+
+% Set page background and text color
+\pagecolor{headerblue}
+\color{textwhite}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.6}
+
+{\LARGE \textbf{FINANCIAL HIGHLIGHTS (UNAUDITED)}}
+
+\smallskip
+\textit{Amounts in billions, except per share amounts}
+
+\vspace{0.5em}
+
+\begin{tabular}{
+    >{\raggedright\arraybackslash}p{4.2cm} 
+    >{\centering\arraybackslash}p{1.7cm}
+    >{\centering\arraybackslash}p{1.7cm}
+    >{\centering\arraybackslash}p{1.7cm}
+    >{\centering\arraybackslash}p{1.7cm}
+    >{\centering\arraybackslash}p{1.7cm}
+}
+\rowcolor{headerblue}
+\textbf{} & \textbf{2023} & \textbf{2022} & \textbf{2021} & \textbf{2020} & \textbf{2019} \\
+\arrayrulecolor{lightblue}\midrule
+\textbf{Net Sales} & \textbf{\$82.0} & \$80.2 & \$76.1 & \$71.0 & \$67.7 \\
+\midrule
+\textbf{Operating Income} & \textbf{\$18.1} & \$17.8 & \$18.0 & \$15.7 & \$5.5 \\
+\midrule
+\textbf{Net Earnings Attributable to P\&G} & \textbf{\$14.7} & \$14.7 & \$14.3 & \$13.0 & \$3.9 \\
+\midrule
+\textbf{Net Earnings Margin} & \textbf{18.0\%} & 18.4\% & 18.9\% & 18.5\% & 5.9\% \\
+\midrule
+\textbf{Diluted Net Earnings per Common Share} & \textbf{\$5.90} & \$5.81 & \$5.50 & \$4.96 & \$1.43 \\
+\midrule
+\textbf{Core Earnings per Share} & \textbf{\$5.90} & \$5.81 & \$5.66 & \$5.12 & \$4.52 \\
+\midrule
+\textbf{Operating Cash Flow} & \textbf{\$16.8} & \$16.7 & \$18.4 & \$17.4 & \$15.2 \\
+\midrule
+\textbf{Dividends per Common Share} & \textbf{\$3.68} & \$3.52 & \$3.24 & \$3.03 & \$2.90 \\
+\end{tabular}
+\end{center}
+
+\end{document}
