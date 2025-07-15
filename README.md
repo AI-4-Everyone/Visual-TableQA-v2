@@ -22,12 +22,14 @@ Welcome to **TableQA-Synthetic**, a project designed to generate high-quality **
 ---
 
 ## 📁 Repository Structure
+
+```text
 ├── Generation/TableQA.ipynb # Main notebook to generate synthetic QA
 ├── Examples/ # Example generated images and records
 ├── Evaluation/
 ├── README.md
 └── LICENSE
-
+```
 ## 📦 Installation
 
 ```bash
