@@ -1,16 +1,17 @@
-# 🧠 TableQA-Synthetic: Generating QA Datasets from Table Images
+# 🧠 TableQA-Synthetic Dataset: Generating QA Datasets from Table Images
 
-Welcome to **TableQA-Synthetic**, a project designed to generate high-quality **synthetic question-answer datasets** associated to **images of tables**. This resource is ideal for training and evaluating models on visually-grounded table understanding tasks such as **document QA**, **table parsing**, and **multimodal reasoning**.
+Welcome to **TableQA-Synthetic Dataset**, a project designed to generate high-quality **synthetic question-answer datasets** associated to **images of tables**. This resource is ideal for training and evaluating models on visually-grounded table understanding tasks such as **document QA**, **table parsing**, and **multimodal reasoning**.
 
 ---
 
 ## 📑 Table of Contents
 
 - [🚀 What’s Inside](#-whats-inside)
+- [🚀🚀 Getting Started](#-getting-started)
 - [📘 Paper (Coming Soon)](#-paper-coming-soon)
 - [📁 Repository Structure](#-repository-structure)
 - [🔄 Pipeline](#-pipeline)
-- [📦 Installation](#-installation)
+- [📦 Setup](#-setup)
 - [📤 Dataset Access](#-dataset-access)
 - [📄 License](#-license)
 - [📚 Citation](#-citation)
@@ -19,11 +20,26 @@ Welcome to **TableQA-Synthetic**, a project designed to generate high-quality **
 
 ## 🚀 What’s Inside
 
-- 📓 **Notebook** for generating synthetic table images and their QA pairs  
+- 📓 **Notebook** for generating synthetic table images and their QA pairs
+- 📓 **Notebook** for evaluating LLMs on this dataset
 - 🖼️ Support for structured and stylized LaTeX tables or custom-designed visuals  
 - 🔍 Automatic generation of questions and answers with ground-truth alignment  
 - ⚡ Ready-to-use for fine-tuning LLMs, vision-language models, or benchmarking pipelines
 
+---
+
+## 🚀🚀 Getting Started
+To quickly load and explore the dataset in Python, you can use the 🤗 `datasets` library:
+
+```python
+from datasets import load_dataset
+
+# Load the test split of the Im2TeX dataset
+dataset = load_dataset('AI-4-Everyone/TableQA-v2')
+
+# Print dataset info
+print(dataset)
+```
 ---
 
 ## 📘 Paper (Coming Soon)
@@ -59,7 +75,7 @@ The complete pipeline is illustrated below:
 ├── README.md
 └── LICENSE
 ```
-## 📦 Installation
+## 📦 Setup
 
 ```bash
 pip install -r requirements.txt
