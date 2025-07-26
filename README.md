@@ -4,6 +4,19 @@ Welcome to **TableQA-Synthetic**, a project designed to generate high-quality **
 
 ---
 
+## 📑 Table of Contents
+
+- [🚀 What’s Inside](#-whats-inside)
+- [📘 Paper (Coming Soon)](#-paper-coming-soon)
+- [📁 Repository Structure](#-repository-structure)
+- [🔄 Pipeline](#-pipeline)
+- [📦 Installation](#-installation)
+- [📤 Dataset Access](#-dataset-access)
+- [📄 License](#-license)
+- [📚 Citation](#-citation)
+
+---
+
 ## 🚀 What’s Inside
 
 - 📓 **Notebook** for generating synthetic table images and their QA pairs  
@@ -18,6 +31,22 @@ Welcome to **TableQA-Synthetic**, a project designed to generate high-quality **
 📝 A detailed dataset paper describing the methodology, QA strategy, and dataset statistics is coming soon.  
 <!-- Replace the placeholder below with your actual paper link -->
 **[📄 Read the Paper (coming soon)](https://arxiv.org/abs/XXXXX)**
+
+---
+
+## 🔄 Pipeline
+
+The synthetic data generation pipeline in **TableQA-Synthetic** follows a multi-stage process combining vision-language models (VLMs), large language models (LLMs), and structured logic:
+
+1. **Offline Preparation**: Using table images and textual prompts, a VLM and LLM generate LaTeX-style table templates and thematic concepts.
+2. **Table Synthesis**: These instructions are passed to another LLM to generate diverse structured tables in JSON format, which are then rendered into images.
+3. **QA Generation**: An additional LLM generates multiple QA pairs for each table, guided by reasoning-based prompts.
+4. **Validation**: A group of LLMs acts as a jury to validate the correctness and relevance of each QA pair.
+5. **Export**: Validated image–question–answer triplets are saved in a standardized format, ready for training and evaluation.
+
+The complete pipeline is illustrated below:
+
+![TableQA Synthetic Pipeline](imgs/tableqa.png)
 
 ---
 
