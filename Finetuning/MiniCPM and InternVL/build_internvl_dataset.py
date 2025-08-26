@@ -25,6 +25,9 @@ output_dir = "internvl_data"              # where JSONs live
 IMG_DIR = OUT_DIR / "clamped_images"      # where images are saved
 LONG_EDGE = 1024                          # clamp longest side
 
+system_message = """You are a Vision Language Model specialized in interpreting visual data from charts and diagrams images.
+Analyze the image and answer the questions with step-by-step reasoning—stay concise, but include any reasoning that’s relevant."""
+
 def to_pil(img):
     return img if isinstance(img, Image.Image) else Image.fromarray(img)
 
@@ -56,6 +59,7 @@ def prepare_data_for_official_script(split, split_name, output_dir="internvl_dat
         img.save(img_path)
 
         # Prepare annotation in InternVL2 format
+        question = f"<image>\n{system_message}\n{sample['question']}"
         annotation = {
             "id": i,
             "image": f"images/{idx}.jpg",
@@ -64,7 +68,7 @@ def prepare_data_for_official_script(split, split_name, output_dir="internvl_dat
             "conversations": [
                 {
                     "from": "human",
-                    "value": f"<image>\n{sample['question']}"
+                    "value": question,
                 },
                 {
                     "from": "gpt",
