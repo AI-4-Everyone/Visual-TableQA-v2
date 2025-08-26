@@ -1,0 +1,10 @@
+{
+  "tableqa_train": {
+    "root": "/notebooks/internvl_data/",
+    "annotation": "/notebooks/internvl_data/annotations_train.jsonl",
+    "data_augment": false,
+    "max_dynamic_patch": 12,
+    "repeat_time": 1,
+    "length": 3617
+  }
+}
