@@ -70,7 +70,8 @@ The complete pipeline is illustrated below:
 
 ```text
 ├── Generation/TableQA.ipynb # Main notebook to generate synthetic QA
-├── Examples/ # Example generated images and records
+├── Gallery/ # Example generated images and records
+├── Finetuning/
 ├── Evaluation/
 ├── README.md
 └── LICENSE
