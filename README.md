@@ -64,6 +64,8 @@ The complete pipeline is illustrated below:
 
 ![TableQA Synthetic Pipeline](imgs/tableqa.png)
 
+Here are some generated tables:
+![Generated sample](imgs/gallery_layout_sheet.png)
 ---
 
 ## 📁 Repository Structure
@@ -76,11 +78,10 @@ The complete pipeline is illustrated below:
 ├── README.md
 └── LICENSE
 ```
+
 ## 📦 Setup
 
-```bash
-pip install -r requirements.txt
-```
+Depending on your objective, you’ll find the relevant setup instructions within the corresponding directory (e.g., Evaluation/, Finetuning/, Generation/)
 
 ## 📤 Dataset Access
 You can find the generated dataset hosted on 🤗 Hugging Face:
