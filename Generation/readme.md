@@ -5,7 +5,7 @@ This directory contains the complete pipeline used to build the **TableQA-v2** d
 - Synthetic table generation
 - Visual rendering (LaTeX + TikZ)
 - QA pair synthesis
-
+- ROSCOE evaluation of QA pairs
 ---
 
 ## 📦 Environment Setup (Docker Recommended)
@@ -18,6 +18,10 @@ Some dependencies — such as **TeX Live** — are extremely large and can take 
 - Version consistency across environments
 - No impact on your local Python or system packages
 
+To run ROSCOE evaluation we recommend to first clone the ParlAI repository
+```bash
+git clone --depth 1 https://github.com/facebookresearch/ParlAI.git
+```
 ---
 
 ## 🚀 Quick Start
