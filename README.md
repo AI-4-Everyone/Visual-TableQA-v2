@@ -108,4 +108,6 @@ Marc Haraoui, Boammani Aser Lompo *Table\_QA*. GitHub repository: https://github
   year         = {2025},
   howpublished = {\url{https://huggingface.co/datasets/AI-4-Everyone/TableQA-v2}},
 }
-# small tweak
+```
+## Aknowledgment
+We want to thank these awesome projects **[InternVL](https://github.com/OpenGVLab/InternVL/tree/main)**, **[MiniCPM-Cookbook](https://github.com/OpenSQZ/MiniCPM-V-CookBook/tree/main)**, **[ROSCOE](https://github.com/facebookresearch/ParlAI/tree/main/projects/roscoe)**, **[ReachQA](https://github.com/hewei2001/ReachQA/tree/main)**
