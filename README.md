@@ -1,6 +1,6 @@
-# 🧠 TableQA-Synthetic Dataset: Generating QA Datasets from Table Images
+# 🧠 Visual-TableQA: Generating QA Datasets and Synthetic Table Images
 
-Welcome to **TableQA-Synthetic Dataset**, a project designed to generate high-quality **synthetic question-answer datasets** associated to **images of tables**. This resource is ideal for training and evaluating models on visually-grounded table understanding tasks such as **document QA**, **table parsing**, and **multimodal reasoning**.
+Welcome to **Visual-TableQA**, a project designed to generate high-quality **synthetic question-answer datasets** associated to **images of tables**. This resource is ideal for training and evaluating models on visually-grounded table understanding tasks such as **document QA**, **table parsing**, and **multimodal reasoning**.
 
 ---
 
@@ -35,7 +35,7 @@ To quickly load and explore the dataset in Python, you can use the 🤗 `dataset
 from datasets import load_dataset
 
 # Load the test split of the Im2TeX dataset
-dataset = load_dataset('AI-4-Everyone/TableQA-v2')
+dataset = load_dataset('AI-4-Everyone/Visual-TableQA')
 
 # Print dataset info
 print(dataset)
@@ -52,7 +52,7 @@ print(dataset)
 
 ## 🔄 Pipeline
 
-The synthetic data generation pipeline in **TableQA-Synthetic** follows a multi-stage process combining vision-language models (VLMs), large language models (LLMs), and structured logic:
+The synthetic data generation pipeline in **Visual-TableQA** follows a multi-stage process combining vision-language models (VLMs), large language models (LLMs), and structured logic:
 
 1. **Offline Preparation**: Using table images and textual prompts, a VLM and LLM generate LaTeX-style table templates and thematic concepts.
 2. **Table Synthesis**: These instructions are passed to another LLM to generate diverse structured tables in JSON format, which are then rendered into images.
@@ -62,7 +62,7 @@ The synthetic data generation pipeline in **TableQA-Synthetic** follows a multi-
 
 The complete pipeline is illustrated below:
 
-![TableQA Synthetic Pipeline](imgs/tableqa.png)
+![Visual-TableQA Synthetic Pipeline](imgs/tableqa.png)
 
 Here are some generated tables:
 ![Generated sample](imgs/gallery_layout_sheet.png)
@@ -85,7 +85,7 @@ Depending on your objective, you’ll find the relevant setup instructions withi
 
 ## 📤 Dataset Access
 You can find the generated dataset hosted on 🤗 Hugging Face:
-**[TableQA Synthetic Dataset →](https://huggingface.co/datasets/AI-4-Everyone/TableQA-v2)**
+**[Visual-TableQA](https://huggingface.co/datasets/AI-4-Everyone/Visual-TableQA)**
 
 ## 📄 License
 
@@ -98,15 +98,15 @@ You are free to use, copy, modify, merge, publish, distribute, sublicense, and/o
 If you use this code or dataset in your research, please cite:
 
 **Plain-text citation:**  
-Marc Haraoui, Boammani Aser Lompo *Table\_QA*. GitHub repository: https://github.com/AI-4-Everyone/TableQA
+Marc Haraoui, Boammani Aser Lompo *Table\_QA*. GitHub repository: https://github.com/AI-4-Everyone/Visual-TableQA
 
 **BibTeX:**
 ```bibtex
-@misc{haraouilompo2025tableqa,
+@misc{haraouilompo2025Visual-TableQA,
   author       = {Marc Haraoui and Boammani Aser Lompo},
-  title        = {TableQA},
+  title        = {Visual-TableQA},
   year         = {2025},
-  howpublished = {\url{https://huggingface.co/datasets/AI-4-Everyone/TableQA-v2}},
+  howpublished = {\url{https://huggingface.co/datasets/AI-4-Everyone/Visual-TableQA}},
 }
 ```
 ## Aknowledgment
