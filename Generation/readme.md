@@ -1,6 +1,6 @@
 # 🏗️ Dataset Construction Pipeline
 
-This directory contains the complete pipeline used to build the **TableQA-v2** dataset from scratch, including:
+This directory contains the complete pipeline used to build the **Visual-TableQA** dataset from scratch, including:
 
 - Synthetic table generation
 - Visual rendering (LaTeX + TikZ)

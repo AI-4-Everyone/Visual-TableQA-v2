@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-# Build MiniCPM-style JSONs for AI-4-Everyone/TableQA-v2
+# Build MiniCPM-style JSONs for AI-4-Everyone/Visual-TableQA
 
 """
 Build MiniCPM-style JSON files (train/val/test) from a HF dataset with images.
-Defaults to AI-4-Everyone/TableQA-v2 and clamps images to a given long edge.
+Defaults to AI-4-Everyone/Visual-TableQA and clamps images to a given long edge.
 
 Usage examples:
   python build_minicpm_dataset.py
@@ -14,7 +14,7 @@ import json
 from datasets import load_dataset
 from PIL import Image, ImageOps, Image
 
-DATASET_REPO = "AI-4-Everyone/TableQA-v2"
+DATASET_REPO = "AI-4-Everyone/Visual-TableQA"
 OUT_DIR = Path("minicpm_ds")              # where JSONs live
 IMG_DIR = OUT_DIR / "clamped_images"      # where images are saved
 LONG_EDGE = 1024                          # clamp longest side

@@ -1,6 +1,6 @@
-# 🧪 Finetuning VLMs on TableQA-v2
+# 🧪 Finetuning VLMs on Visual-TableQA
 
-This guide walks you through the steps to finetune and run inference with two Vision-Language Models (VLMs): **MiniCPM** and **InternVL**, using the [AI-4-Everyone/TableQA-v2](https://huggingface.co/datasets/AI-4-Everyone/TableQA-v2) dataset.
+This guide walks you through the steps to finetune and run inference with two Vision-Language Models (VLMs): **MiniCPM** and **InternVL**, using the [AI-4-Everyone/Visual-TableQA](https://huggingface.co/datasets/AI-4-Everyone/Visual-TableQA) dataset.
 
 ---
 
@@ -27,7 +27,7 @@ git clone https://github.com/OpenSQZ/MiniCPM-V-CookBook.git
 ### Step 2: Prepare Dataset
 
 Follow the finetuning instructions in the MiniCPM repo.  
-You can use the script `build_minicpm_dataset.py` to preprocess the TableQA-v2 dataset.
+You can use the script `build_minicpm_dataset.py` to preprocess the Visual-TableQA dataset.
 
 ### Step 3: Add Finetuning Script
 
@@ -49,8 +49,8 @@ from datasets import load_dataset
 from peft import PeftModel
 from transformers import AutoModel, AutoTokenizer
 
-# Load TableQA-v2
-ds = load_dataset("AI-4-Everyone/TableQA-v2")
+# Load Visual-TableQA
+ds = load_dataset("AI-4-Everyone/Visual-TableQA")
 train = ds["train"]
 
 # Load model + LoRA adapter
@@ -128,13 +128,13 @@ from internvl_utils import load_image
 from internvl.model.internvl_chat import InternVLChatModel
 
 # Paths
-DATASET_REPO = "AI-4-Everyone/TableQA-v2"
+DATASET_REPO = "AI-4-Everyone/Visual-TableQA"
 adapter_path = "/notebooks/InternVL-sft-lora"
 model_path = "/notebooks/InternVL/pretrained/InternVL2-8B"
 preprocessed_data_path = "internvl_data"
 sys.path.append('/notebooks/InternVL/internvl_chat')
 
-# Load TableQA-v2
+# Load Visual-TableQA
 ds = load_dataset(DATASET_REPO)
 train = ds["train"]
 sample = train[0]
