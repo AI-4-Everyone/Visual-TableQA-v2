@@ -1,4 +1,4 @@
-# 🧠 Visual-TableQA: Generating QA Datasets and Synthetic Table Images
+# 🧠 Visual-TableQA: Open-Domain Benchmark for Reasoning over Table Images
 
 Welcome to **Visual-TableQA**, a project designed to generate high-quality **synthetic question-answer datasets** associated to **images of tables**. This resource is ideal for training and evaluating models on visually-grounded table understanding tasks such as **document QA**, **table parsing**, and **multimodal reasoning**.
 
