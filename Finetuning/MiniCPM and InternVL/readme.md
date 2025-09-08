@@ -26,7 +26,7 @@ git clone https://github.com/OpenSQZ/MiniCPM-V-CookBook.git
 
 ### Step 2: Prepare Dataset
 
-Follow the finetuning instructions in the MiniCPM repo.  
+Follow the finetuning instructions in the MiniCPM repo for a custom dataset. 
 You can use the script `build_minicpm_dataset.py` to preprocess the Visual-TableQA dataset.
 
 ### Step 3: Add Finetuning Script
