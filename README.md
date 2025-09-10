@@ -102,11 +102,14 @@ Marc Haraoui, Boammani Aser Lompo *Table\_QA*. GitHub repository: https://github
 
 **BibTeX:**
 ```bibtex
-@misc{haraouilompo2025Visual-TableQA,
-  author       = {Marc Haraoui and Boammani Aser Lompo},
-  title        = {Visual-TableQA},
-  year         = {2025},
-  howpublished = {\url{https://huggingface.co/datasets/AI-4-Everyone/Visual-TableQA}},
+@misc{lompo2025visualtableqaopendomainbenchmarkreasoning,
+      title={Visual-TableQA: Open-Domain Benchmark for Reasoning over Table Images}, 
+      author={Boammani Aser Lompo and Marc Haraoui},
+      year={2025},
+      eprint={2509.07966},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2509.07966}, 
 }
 ```
 ## Aknowledgment
