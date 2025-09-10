@@ -42,11 +42,10 @@ print(dataset)
 ```
 ---
 
-## 📘 Paper (Coming Soon)
+## 📘 Paper (Out! ✅)
 
-📝 A detailed dataset paper describing the methodology, QA strategy, and dataset statistics is coming soon.  
-<!-- Replace the placeholder below with your actual paper link -->
-**[📄 Read the Paper (coming soon)](https://arxiv.org/abs/XXXXX)**
+📝 A detailed dataset paper describing the methodology, QA strategy, and dataset statistics are presented in the paper.  
+**[📄 Read the Paper](https://arxiv.org/abs/2509.07966)**
 
 ---
 
