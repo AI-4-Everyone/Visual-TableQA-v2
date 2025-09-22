@@ -87,7 +87,10 @@ msgs = [{'role': 'user', 'content': [image, question]}]
 response = model.chat(
     msgs=msgs,
     image=image,
-    tokenizer=tokenizer
+    tokenizer=tokenizer,
+    sampling=False,     # <- switch off sampling (default is True)
+    num_beams=1,        # <- greedy decoding for determinism
+    max_new_tokens=5000
 )
 
 print(response)
@@ -167,7 +170,7 @@ response = model.chat(
     tokenizer=tokenizer,
     pixel_values=pixel_values,
     question=question,
-    generation_config={"max_new_tokens": 5000, "do_sample": True},
+    generation_config={"max_new_tokens": 5000, "do_sample": False},
     history=None,
     return_history=False
 )
