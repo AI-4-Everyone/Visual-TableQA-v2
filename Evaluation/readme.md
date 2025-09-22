@@ -1,10 +1,10 @@
-# 📊 Evaluating Qwen2.5-VL on Visual-TableQA
+# 📊 Locally evaluating Qwen2.5-VL on Visual-TableQA
 
 The notebook provides an evaluation pipeline for **Qwen2.5-VL** on the [Visual-TableQA](https://huggingface.co/datasets/AI-4-Everyone/Visual-TableQA) dataset.
 
 ## 🛠️ Model Compatibility
 
-The evaluation code is easily customizable to run other VLMs such as:
+The evaluation code is easily customizable to locally run other VLMs such as:
 
 - **LLaVA**
 - **InternVL**
