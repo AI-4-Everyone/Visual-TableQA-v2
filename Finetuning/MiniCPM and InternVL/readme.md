@@ -77,7 +77,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_type, trust_remote_code=True)
 image = Image.open(f"minicpm_ds/clamped_images/{train[0]['table_id']}.jpg").convert('RGB')
 system_prompt = (
     "You are a Vision Language Model specialized in interpreting visual data from charts and diagrams images.\n"
-    "Analyze the image and answer the questions with step-by-step reasoning—stay concise, but include any reasoning that’s relevant."
+    "Answer the questions strictly from the image, with clear, rigorous step-by-step justification. Stay concise, but include all reasoning that’s relevant."
 )
 
 question = f"{system_prompt}\n{train[0]['question']}"
@@ -157,7 +157,7 @@ img_path = f"/notebooks/{preprocessed_data_path}/images/{sample['table_id']}.jpg
 pixel_values = load_image(img_path, max_num=12).to(torch.bfloat16).cuda()
 system_prompt = (
     "You are a Vision Language Model specialized in interpreting visual data from charts and diagrams images.\n"
-    "Analyze the image and answer the questions with step-by-step reasoning—stay concise, but include any reasoning that’s relevant."
+    "Answer the questions strictly from the image, with clear, rigorous step-by-step justification. Stay concise, but include all reasoning that’s relevant."
 )
 
 question = f"<image>\n{system_prompt}\n{sample['question']}"
