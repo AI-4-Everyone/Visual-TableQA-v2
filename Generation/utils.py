@@ -9,6 +9,7 @@ import os
 from pdf2image import convert_from_path
 from IPython.display import Image, display
 import cv2
+import numpy as np
 import pytesseract
 from pytesseract import Output
 from typing_extensions import final
@@ -164,8 +165,8 @@ def extract_json_blocks(text):
         return last_match
 
     # We want the text if there was no json found
-    print("No Json found in text:")
-    print(text[:20])
+    # print("No Json found in text:")
+    # print(text[:20])
     return text
 
 
