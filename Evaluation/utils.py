@@ -15,7 +15,7 @@ from pytesseract import Output
 from typing_extensions import final
 import shutil
 import time
-
+from typing import Optional, Any, Dict
 
 def generate_unique_filename(prefix):
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
@@ -132,6 +132,13 @@ def save_latex_table_as_image(table, table_name, output_dir, show_img=False):
         crop_image(png_path, show_img=show_img)
 
 
+
+def _strip_code_fences(text: str) -> str:
+    # If there are fenced blocks, keep only their contents (often where JSON lives)
+    CODE_FENCE_RE = re.compile(r"```(?:json)?\s*(.*?)\s*```", re.DOTALL | re.IGNORECASE)
+    blocks = CODE_FENCE_RE.findall(text)
+    return "\n\n".join(blocks) if blocks else text
+    
 def extract_json_blocks(text):
     """
     Extracts JSON code blocks from the input text and parses them into Python dictionaries.
@@ -164,9 +171,38 @@ def extract_json_blocks(text):
     if last_match:
         return last_match
 
-    # We want the text if there was no json found
-    # print("No Json found in text:")
-    # print(text[:20])
+    """
+    Scan `text` and return the last valid JSON object found as a dict.
+    Works even if there's prose before/after, bullets, or code fences.
+    """
+    # Preprocess: remove code fences (keeps just their content)
+    text = _strip_code_fences(text)
+
+    decoder = json.JSONDecoder()
+    i = 0
+    last_obj = None
+    last_str = None
+
+    while i < len(text):
+        if text[i] not in "{[":
+            i += 1
+            continue
+        try:
+            obj, end = decoder.raw_decode(text, idx=i)
+            last_obj = obj
+            last_str = text[i:end]   # raw substring of the JSON
+            i = end
+        except json.JSONDecodeError:
+            i += 1
+
+    if last_obj is None:
+        # We want the text if there was no json found
+        # print("No Json found in text:")
+        # print(text[:20])
+        return text
+    else:
+        return last_str
+    
     return text
 
 
