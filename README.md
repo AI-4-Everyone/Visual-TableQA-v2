@@ -135,8 +135,8 @@ Marc Haraoui, Boammani Aser Lompo *Table\_QA*. GitHub repository: https://github
 @inproceedings{
 lompo2025visualtableqa,
 title={Visual-Table{QA}: Open-Domain Benchmark for Reasoning over Table Images},
-author={Boammani Aser Lompo},
-booktitle={First Workshop on Foundations of Reasoning in Language Models},
+author={Boammani Aser Lompo and Marc Haraoui},
+booktitle={NeurIPS 2025 Workshop on Foundations of Reasoning in Language Models},
 year={2025},
 url={https://openreview.net/forum?id=fvJRsGwhPf}
 }
