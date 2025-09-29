@@ -128,7 +128,7 @@ You are free to use, copy, modify, merge, publish, distribute, sublicense, and/o
 If you use this code or dataset in your research, please cite:
 
 **Plain-text citation:**  
-Marc Haraoui, Boammani Aser Lompo *Table\_QA*. GitHub repository: https://github.com/AI-4-Everyone/Visual-TableQA
+Marc Haraoui, Boammani Aser Lompo *Visual-TableQA*. GitHub repository: https://github.com/AI-4-Everyone/Visual-TableQA
 
 **BibTeX:**
 ```bibtex
