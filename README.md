@@ -73,7 +73,7 @@ print(dataset)
 ```
 ---
 
-## 📘 Paper (Out! ✅)
+## 📘 Paper
 
 📝 A detailed dataset paper describing the methodology, QA strategy, and dataset statistics are presented in the paper.  
 **[📄 Read the Paper](https://arxiv.org/abs/2509.07966)**
