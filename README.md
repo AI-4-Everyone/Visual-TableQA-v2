@@ -9,7 +9,7 @@ Welcome to **Visual-TableQA**, a project designed to generate high-quality **syn
 - [🚀 Latest Update](#-latest-update)
 - [🚀 What’s Inside](#-whats-inside)
 - [🚀🚀 Getting Started](#-getting-started)
-- [📘 Paper (Coming Soon)](#-paper-coming-soon)
+- [📘 Paper](#-paper)
 - [📁 Repository Structure](#-repository-structure)
 - [🔄 Pipeline](#-pipeline)
 - [📦 Setup](#-setup)
