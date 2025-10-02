@@ -65,7 +65,7 @@ To quickly load and explore the dataset in Python, you can use the 🤗 `dataset
 ```python
 from datasets import load_dataset
 
-# Load the test split of the Im2TeX dataset
+# Load the dataset
 dataset = load_dataset('AI-4-Everyone/Visual-TableQA')
 
 # Print dataset info
