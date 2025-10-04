@@ -26,7 +26,7 @@ git clone https://github.com/OpenSQZ/MiniCPM-V-CookBook.git
 
 ### Step 2: Prepare Dataset
 
-Follow the finetuning instructions in the MiniCPM repo for a custom dataset. 
+Follow the finetuning instructions in the MiniCPM repo for a custom dataset.
 You can use the script `build_minicpm_dataset.py` to preprocess the Visual-TableQA dataset.
 
 ### Step 3: Add Finetuning Script
@@ -74,7 +74,7 @@ model = PeftModel.from_pretrained(
 tokenizer = AutoTokenizer.from_pretrained(model_type, trust_remote_code=True)
 
 # Prepare inputs
-image = Image.open(f"minicpm_ds/clamped_images/{train[0]['table_id']}.jpg").convert('RGB')
+image = Image.open(f"minicpm_ds/images/{train[0]['table_id']}.jpg").convert('RGB')
 system_prompt = (
     "You are a Vision Language Model specialized in interpreting visual data from charts and diagrams images.\n"
     "Answer the questions strictly from the image, with clear, rigorous step-by-step justification. Stay concise, but include all reasoning that’s relevant."

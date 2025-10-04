@@ -16,8 +16,7 @@ from PIL import Image, ImageOps, Image
 
 DATASET_REPO = "AI-4-Everyone/Visual-TableQA"
 OUT_DIR = Path("minicpm_ds")              # where JSONs live
-IMG_DIR = OUT_DIR / "clamped_images"      # where images are saved
-LONG_EDGE = 1024                          # clamp longest side
+IMG_DIR = OUT_DIR / "images"      # where images are saved
 WRITE_ABSOLUTE_PATHS = False              # set True if you want /abs/paths in JSON
 system_message = """You are a Vision Language Model specialized in interpreting visual data from charts and diagrams images.
 Analyze the image and answer the questions with step-by-step reasoning—stay concise, but include any reasoning that’s relevant."""
@@ -26,18 +25,12 @@ Analyze the image and answer the questions with step-by-step reasoning—stay co
 def to_pil(img):
     return img if isinstance(img, Image.Image) else Image.fromarray(img)
 
-def clamp_long_edge(img, longest=LONG_EDGE):
-    img = to_pil(img)
-    if img.mode != "RGB":  # avoid JPEG RGBA errors
-        img = img.convert("RGB")
-    return ImageOps.contain(img, (longest, longest), Image.Resampling.BICUBIC)
-
 def process_split(split, split_name, out_json):
     IMG_DIR.mkdir(parents=True, exist_ok=True)
     records = []
     for i, sample in enumerate(split):
         idx = sample["table_id"]
-        img = clamp_long_edge(sample["image"], LONG_EDGE)
+        img = to_pil(sample["image"], LONG_EDGE)
         answer = sample["answer"]
 
         img_path = IMG_DIR / f"{idx}.jpg"

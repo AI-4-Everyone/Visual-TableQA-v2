@@ -51,13 +51,13 @@ torchrun $DISTRIBUTED_ARGS finetune.py  \
     --output_dir $OUTPUT \
     --logging_dir $OUTPUT \
     --logging_strategy "steps" \
-    --per_device_train_batch_size 1 \
-    --per_device_eval_batch_size 1 \
+    --per_device_train_batch_size 3 \
+    --per_device_eval_batch_size 4 \
     --gradient_accumulation_steps 8 \
     --evaluation_strategy "steps" \
     --save_strategy "steps" \
     --save_steps 100 \
-    --save_total_limit 2 \
+    --save_total_limit 3 \
     --load_best_model_at_end true \
     --metric_for_best_model "eval_loss" \
     --greater_is_better false \
@@ -70,7 +70,7 @@ torchrun $DISTRIBUTED_ARGS finetune.py  \
     --warmup_ratio 0.03 \
     --lr_scheduler_type "cosine" \
     --optim "adamw_torch_fused" \
-    --logging_steps 10 \
+    --logging_steps 20 \
     --gradient_checkpointing true \
     --gradient_checkpointing_kwargs '{"use_reentrant": false}' \
     --report_to "tensorboard"
